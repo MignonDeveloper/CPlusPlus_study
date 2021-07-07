@@ -49,12 +49,12 @@ int _tmain ( int argc, _TCHAR *argv[] ){
 프로그래밍의 특성상 작성이 끝난 코드를 수정해야 하는 경우가 종종 발생하는데, 아래와 같은 경우를 생각해보자.
 
 ```c++
-# 2013년 철수가 만든 함수
+// 2013년 철수가 만든 함수
 int CalcLayout(int nWidth, int nHeight){
     return nWidth * nHeight;
 }
 
-# 2013년 사용자 코드
+// 2013년 사용자 코드
 int _tmain( ){
     CalcLayout(10,5);
     return 0;
@@ -64,14 +64,14 @@ int _tmain( ){
 
 
 ```c++
-# 2013년 철수의 코드를 2016년 영희가 변경
+// 2013년 철수의 코드를 2016년 영희가 변경
 #define MyType_A 100
 #define MyType_B 200
 int CalcLayout(int nWidth, int nHeight, int nType){
     return nWidth * nHeight + nType;
 }
 
-# 2016년 사용자 코드
+// 2016년 사용자 코드
 int _tmain( ){
     CalcLayout(10,5,MyType_A);
     return 0;
